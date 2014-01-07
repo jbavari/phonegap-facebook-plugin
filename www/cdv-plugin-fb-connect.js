@@ -61,3 +61,9 @@ CDV.FB = {
                   }, (fail?fail:null), 'org.apache.cordova.facebook.Connect', 'showDialog', [params] );
   }
 };
+
+if (typeof exports !== 'undefined') {
+  if (typeof module !== 'undefined' && module.exports) {
+    exports = module.exports = CDV.FB;
+  }
+}

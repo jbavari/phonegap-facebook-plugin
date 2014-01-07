@@ -20,6 +20,14 @@
     
     <asset src="www/cdv-plugin-fb-connect.js" target="cdv-plugin-fb-connect.js" />
     <asset src="www/facebook-js-sdk.js" target="facebook-js-sdk.js" />
+
+    <js-module name="org.apache.cordova.facebook.Connect" src="www/cdv-plugin-fb-connect.js">
+        <clobbers target="CDV.FB" />
+    </js-module>
+
+    <js-module name="FacebookSDK" src="www/facebook-js-sdk.js">
+        <clobbers target="FB" />
+    </js-module>
     
     <config-file target="config.xml" parent="/*">
       <access origin="https://m.facebook.com" />
@@ -69,8 +77,15 @@
     <platform name="ios">
       
         <!-- Cordova >= 2.3 -->
-        <config-file target="config.xml" parent="plugins">
+        <!-- <config-file target="config.xml" parent="plugins">
             <plugin name="org.apache.cordova.facebook.Connect" value="FacebookConnectPlugin"/>
+        </config-file> -->
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="org.apache.cordova.facebook.Connect">
+                <param name="ios-package" value="FacebookConnectPlugin" />
+            </feature>
+            <!-- <plugin name="org.apache.cordova.facebook.Connect" value="FacebookConnectPlugin"/> -->
         </config-file>
         
         <header-file src="src/ios/FacebookConnectPlugin.h" />
