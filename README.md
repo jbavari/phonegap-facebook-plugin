@@ -171,7 +171,7 @@ Make sure you add the scheme to your [PROJECTNAME]-Info.plist (located as one of
 </pre>
 
 ## Automatic Installation
-This plugin is based on [plugman](https://git-wip-us.apache.org/repos/asf?p=cordova-plugman.git;a=summary). To install it to your app, simply execute plugman as follows; It does not currently work with plugman at all. WORK IN PROGRESS 
+This plugin is based on [plugman](https://git-wip-us.apache.org/repos/asf?p=cordova-plugman.git;a=summary). To install it to your app, simply execute plugman as follows; I have fixed this build to work with both Cordova/PhoneGap 2.x and 3.x versions. With or without plugman.
 
 	plugman install --platform [PLATFORM] --project [TARGET-PATH] --plugin [PLUGIN-PATH] --variable APP_ID="[APP_ID]" --variable APP_NAME="[APP_NAME]"
 	
