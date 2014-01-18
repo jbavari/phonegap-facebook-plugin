@@ -182,3 +182,7 @@ This plugin is based on [plugman](https://git-wip-us.apache.org/repos/asf?p=cord
 		[APP_ID] = Your APP_ID as registered on Facebook
 
 
+## Manual Installation
+Clone the repo, and issue this command:
+
+cordova plugin add ../phonegap-facebook-plugin --variable APP_ID="[YOUR_APP_ID_HERE]" --variable APP_NAME="[YOUR_APP_NAME_HERE]" 
